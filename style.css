@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --primary-color: #a306b6;
+  --text-color: white;
+  --backgroundColor: #f4f4f4;
+  --secondaryColor: #333;
+}
+
+body {
+  font-family: "Verdana", sans-serif;
+  background: var(--backgroundColor);
+  lineheight: 1.5;
+  color: var(--secondaryColor);
+
+  header {
+    nav {
+      min-height: 8vh;
+      background: var(--primary-color);
+      color: var(--text-color);
+
+      span {
+        font-size: 1.5rem;
+        margin: 20px;
+      }
+
+      ul {
+        display: flex;
+        justify-content: space-around;
+        width: 24%;
+
+        li {
+          list-style: none;
+
+          a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 10px;
+          }
+        }
+      }
+    }
+
+    div {
+      background: url("./closeup-shot-beautiful-female-lion.jpg");
+      background-size: cover;
+      background-position: center;
+      min-height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--text-color);
+      text-align: center;
+
+      & h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  main {
+    max-width: 40%;
+    margin: 0 auto;
+
+    section {
+      margin: 20px 0;
+
+      h2 {
+        font-weight: bold;
+        margin: 15px 0;
+      }
+
+      p {
+        margin: 10px 0;
+      }
+
+      div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        cursor: pointer;
+
+        :hover {
+          transform: scale(1.02);
+          transition: transform 0.5s;
+        }
+
+        article {
+          background: var(--text-color);
+          padding: 1rem;
+          border: 1px solid var(--primary-color);
+          box-shadow: 0px 9px 9px 8px rgba(0, 0, 0, 0.1);
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  footer {
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px;
+    height: 8vh;
+
+    h4 {
+      margin: 0 0 0 14px;
+    }
+  }
+}
